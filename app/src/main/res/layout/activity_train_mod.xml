@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color_gold"
+    tools:context=".TrainMod">
+
+    <TextView
+        android:id="@+id/wordText"
+        android:layout_width="388dp"
+        android:layout_height="161dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="TextView"
+        android:textColor="@color/main_color_blue"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+    <Button
+        android:id="@+id/check"
+        style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+        android:layout_width="159dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="188dp"
+        android:background="@drawable/layout_bg"
+        android:text="Проверить"
+        android:textColor="@color/main_color_red"
+        app:backgroundTint="@color/ic_launcher_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/translateText"
+        android:layout_width="270dp"
+        android:layout_height="113dp"
+        android:ems="10"
+        android:gravity="fill"
+        android:hint="Перевод пиши сюда"
+        android:inputType="textPersonName"
+        android:textColor="@color/main_color_red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wordText"
+        app:layout_constraintVertical_bias="0.227" />
+
+    <ImageView
+        android:id="@+id/next"
+        android:layout_width="153dp"
+        android:layout_height="87dp"
+        android:layout_marginBottom="32dp"
+        android:rotation="182"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/strelka" />
+</androidx.constraintlayout.widget.ConstraintLayout>

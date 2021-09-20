@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color_gold"
+    android:theme="@style/Theme.BaseAppTheme"
+    tools:context=".AddWord">
+
+    <ImageView
+        android:id="@+id/addLogo"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:transitionName="Logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025"
+        app:srcCompat="@drawable/icon" />
+
+    <TextView
+        android:id="@+id/addWordText"
+        android:layout_width="186dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="80dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Добавить слово"
+        android:textColor="@color/main_color_blue"
+        android:textColorHighlight="@color/main_color_red"
+        android:textColorHint="@color/main_color_gold"
+        android:textColorLink="@color/main_color_red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainPanel"
+        android:layout_width="384dp"
+        android:layout_height="318dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/layout_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addWordText"
+        app:layout_constraintVertical_bias="0.328">
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Сохранить"
+            app:backgroundTint="@color/main_color_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/wordLayout"
+            android:layout_width="370dp"
+            android:layout_height="67dp"
+            android:layout_marginTop="52dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.571"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/word"
+                android:layout_width="98dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="16dp"
+                android:text="Слово:"
+                android:textColor="@color/main_color_red"
+                android:textSize="21.6sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/getWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Слово"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textColorHint="@color/main_color_gold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/word"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/translateLayout"
+            android:layout_width="370dp"
+            android:layout_height="67dp"
+            android:layout_marginTop="52dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.571"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wordLayout">
+
+            <TextView
+                android:id="@+id/translate"
+                android:layout_width="95dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="16dp"
+                android:text="Перевод:"
+                android:textColor="@color/main_color_red"
+                android:textSize="21.6sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/getTranslate"
+                android:layout_width="208dp"
+                android:layout_height="53dp"
+                android:ems="10"
+                android:hint="Перевод"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                android:textColorHint="@color/main_color_gold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/translate"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

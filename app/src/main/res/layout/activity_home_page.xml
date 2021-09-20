@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color_gold"
+    android:theme="@style/Theme.BaseAppTheme"
+    tools:context=".HomePage">
+
+    <ImageView
+        android:id="@+id/homeLogo"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:transitionName="Logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025"
+        app:srcCompat="@drawable/icon" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addWordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        app:backgroundTint="@color/main_color_red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <TextView
+        android:id="@+id/yourDictionary"
+        android:layout_width="186dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="80dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Ваш словарь"
+        android:textColor="@color/main_color_blue"
+        android:textColorHighlight="@color/main_color_red"
+        android:textColorHint="@color/main_color_gold"
+        android:textColorLink="@color/main_color_red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="547dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.59000003">
+
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="547dp"
+            android:layout_marginTop="6dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:theme="@style/Theme.AppCompat"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/yourDictionary"
+            app:layout_constraintVertical_bias="0.0">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/set"
+        android:layout_width="76dp"
+        android:layout_height="71dp"
+        android:transitionName="Set"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/homeLogo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/settings2" />
+
+    <Button
+        android:id="@+id/learnButton"
+        style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+        android:layout_width="159dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/layout_bg"
+        android:text="Изучать слова"
+        android:textColor="@color/main_color_red"
+        app:backgroundTint="@color/ic_launcher_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
